@@ -9,18 +9,38 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = SliderOnboarding, // Warna biru muda lebih cocok di tema gelap
+    onPrimary = TextPrimary,
+    secondary = ButtonBlue,
+    onSecondary = TextWhite,
+    tertiary = SkyBlue,
+    onTertiary = TextPrimary,
+    background = Color(0xFF121212),
+    onBackground = TextWhite,
+    surface = Color(0xFF1E1E1E),
+    onSurface = TextWhite,
+    error = BackgroundPink,
+    onError = TextPrimary,
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+    primary = PrimaryBlue,
+    onPrimary = TextWhite,
+    secondary = SecondaryBlue,
+    onSecondary = TextWhite,
+    tertiary = ButtonBlue,
+    onTertiary = TextWhite,
+    background = BackgroundGreySecondary,
+    onBackground = TextPrimary,
+    surface = BackgroundWhite,
+    onSurface = TextPrimary,
+    error = BackgroundWarning,
+    onError = TextWhite,
+
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),

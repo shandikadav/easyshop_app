@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -33,27 +34,25 @@ fun AuthScreen(modifier: Modifier = Modifier, navController: NavHostController) 
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
-            painter = painterResource(id = com.shancoding.easyshop.R.drawable.banner),
+            painter = painterResource(id = com.shancoding.easyshop.R.drawable.img_onboarding),
             contentDescription = "Banner",
             modifier = Modifier.fillMaxWidth()
-                .height(300.dp)
+                .height(250.dp)
         )
         Spacer(Modifier.height(20.dp))
         Text("Start your shopping journey now",
-            style = TextStyle(
-                fontSize = 30.sp,
-                fontFamily = FontFamily.Monospace,
-                fontWeight = FontWeight.SemiBold,
-                textAlign = TextAlign.Center
-            )
-        )
-        Text("Start your shopping journey now",
-            style = TextStyle(
+            style = MaterialTheme.typography.headlineLarge.copy(
                 textAlign = TextAlign.Center
             )
         )
 
         Spacer(Modifier.height(20.dp))
+
+        Text("Shopping with best prices",
+            style = MaterialTheme.typography.bodyLarge
+        )
+
+        Spacer(Modifier.height(40.dp))
 
         Button(onClick = {
             navController.navigate("login")
